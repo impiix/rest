@@ -1,0 +1,4 @@
+articles:
+    type: rest
+    resource: AppBundle\Controller\DefaultController
+    prefix: /api/v1

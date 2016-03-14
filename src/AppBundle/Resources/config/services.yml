@@ -1,0 +1,18 @@
+services:
+  article.service:
+      class: AppBundle\Service\ArticleService
+      arguments: ["@doctrine.orm.entity_manager"]
+  encoder:
+      factory: [AppBundle\Service\EncoderService, create]
+      class: Neomerx\JsonApi\Encoder\Encoder
+      arguments: ["api/v1"]
+  validator.service:
+      class: AppBundle\Service\ValidatorService
+      arguments: ["@validator"]
+  modify.listener:
+      class: AppBundle\Event\Listener\ModifyResponse
+      tags:
+        - {name: kernel.event_listener, event: kernel.response}
+
+
+
