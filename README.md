@@ -1,4 +1,5 @@
 rest
 ====
 
-A Symfony project created on January 25, 2016, 4:07 pm.
+A Symfony project implementing simple REST app which follows jsonapi.org standard.
+Uses neomerx/json-api lib.
